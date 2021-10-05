@@ -26,6 +26,12 @@ I implemented the following features, which you can see in the video below.
 | Multiple Agents Planning | 0:50, (also most of the video) |
 | Crowd Simulation | 0:34, agents avoid a head-on collision near screen center <br> 0:50, agents avoid angled collision |
 
+## Art Contest Submission
+
+My animation is simple but I still like the way it looks. It kind of reminds me of cells or something.
+
+![](art-contest.png)
+
 ## Credit
 
 As you can tell from the video and project repository, my project was pretty simple and I didn't use any libraries. I used the Proj1_Test.pde file provided with the original download from canvas as a jumping off point for constructing the project, and took inspiration from our in-class activities for how to go about coding the desired behavior.
