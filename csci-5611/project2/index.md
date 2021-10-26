@@ -14,9 +14,25 @@ I have completed the following features:
 * User Interaction
 * SPH Fluid Simulation
 
-## About (& some reflection) -- TO DO
+## About (& some reflection)
 
-This is a project for CSCI 5611: Animation and Planning in Games that .
+This is a project for CSCI 5611: Animation and Planning in Games that uses numerical integration to simulate 1) cloth and 2) water.
+
+### Cloth Simulation
+
+My cloth simulation uses an abstract mass spring representation of particles connected by spring dampers. I use 2D arrays to track the particle positions and velocities. In my `update` function, I use two nested for-loops to seperately compute the "horizontal" and "vertical" forces on a given particle before using these to update the velocity and position of the particle. I also use a simple approach of computing distance to detect if a particle is colliding with the sphere; I then bounce the particles upon collision using a small COR. To simulate the cloth's surface, I use a triangle mesh to connect adjacent particles.
+
+I implemented simple user interaction with the scene by allowing the user to move the mint-colored sphere along the x- and y-axis. The relevant keys for this are: `o` to go up, `k` to go left, `;` to go right, and`k` to go down. I used the provided example camera code to navigate perspective in the scene -- the key mappings for this did not change from the original code.  
+
+### SPH Fluid Simulation
+
+To simulate water, I use an SPH fluid simulation. Here, I use an array to keep track of the current particle positions, the "old" particle positions, velocities, pressures, and densities. For each pair of particles that are within some distance -- i.e. within the smoothing radius -- I compute separation and cohesion forces based on the target densities of each given particle. I created a `Pair` class to store my `q`, `q2`, and `q3` values that are used in the computation of the pressure and displacement for a given particle.
+
+For the fluid simulation, I generate particles above that drip down into the pool of water to create ripple effects. As particles are generated, their relevant information is added to my particle arrays.
+
+### Reflection
+
+I think both of these simulations turned out decently. What took the most time was tuning parameters to create the most effective scene. If I'd had more time, I would have liked to 1) For the cloth simulation, add a check to see if any part of my triangle mesh was colliding with the sphere rather than just the particle positions; and 2) Figure out how to make my fluid simulation look more like water rather than jittery particles.
 
 ## Code
 
@@ -49,7 +65,7 @@ My animations are simple but I still want to submit for the art contest.
 
 ## Credit
 
-As you can tell from the video and project repository, my project was pretty simple but I did more external resources this time!
+As you can tell from the video and project repository, my project was pretty simple but I did use more external resources this time!
 
 I used the following code from Canvas for my camera controller:
 
