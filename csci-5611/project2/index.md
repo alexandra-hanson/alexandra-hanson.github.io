@@ -41,12 +41,19 @@ I implemented the following features, which you can see in the two videos below.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/VpA5LzJUj38" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## Art Contest Submission -- TO DO
+## Art Contest Submission
 
 My animations are simple but I still want to submit for the art contest.
 
 ![](art-contest.png)
 
-## Credit -- TO DO
+## Credit
 
-As you can tell from the video and project repository, my project was pretty simple and I didn't use any libraries.
+As you can tell from the video and project repository, my project was pretty simple but I did more external resources this time!
+
+I used the following code from Canvas for my camera controller:
+
+* [Processing Example: 3D Camera Code](https://canvas.umn.edu/courses/268733/files/22917781?module_item_id=6799649)
+* The Vec2 library provided in the first homework assignment (I used this library as is for the SPH fluid simulation, and modified it for 3D for my cloth simulation)
+
+I also used the pseudocode provided by Prof. Guy during lecture as a jumping off point for both of these simulations.
