@@ -39,7 +39,7 @@ was constantly referencing a unit circle and thinking about the angle at which
 each component was resting in order to debug and tune my parameters.
 
 In the Arm library, I have my CCD IK solver (as well as the Jacobian solver),
-along with methods to check the joint limits, draw the arm, and do the actually
+along with methods to check the joint limits, draw the arm, and do the actual
 forward kinemantic computation.
 
 In addition to the spider skeleton, I also created an animation "walk" that
@@ -48,7 +48,7 @@ walking because I was not able to figure out how to use joint limits to restrict
 the skeleton's movement; however, it does successfully move across the screen by 
 changing the root of the skeleton. I give it a number of a goal points along the
 floor and each time a goal is reached, the root of the skeleton changes and I
-reverse the skeleton data so that the movement appears seemless and connected.
+reverse the skeleton data so that the movement appears seamless and connected.
 
 The computation here uses a CCD solver within a library called "Legs" which is
 very similar to the library for the Arm in my spider simulation. In this 
@@ -127,7 +127,7 @@ multi-arm IK, joint limits, and user interaction).
 
 ### Simulation : "Walking"
 
-I hesitate to call this walking since I wasn't able to get this work with joint
+I hesitate to call this walking since I wasn't able to get this to work with joint
 limits. However, my IK system does move across the screen by changing the root
 of the skeleton based on which node is currently touching the floor, so this
 should be considered moving IK.
