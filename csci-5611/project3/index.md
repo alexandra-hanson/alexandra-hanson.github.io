@@ -66,6 +66,21 @@ bunch together and move extremely quickly -- not very natural looking at all!
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/cGfC8nlMPw0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+**JACOBIAN MATRIX METHOD**
+
+I implemented a Jacobian IK solver for my alternative approach. This next video
+shows this approach with the same features as the first CCD solver above (i.e.
+multi-arm IK, joint limits, and user interaction).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/07DZA5a7B90" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+| **Component**      | **Timestamps** |
+| ----------- | ----------- |
+| Multi-arm IK | Whole video |
+| Joint limits | Whole video |
+| User interaction | Whole video |
+| Alternative IK Solver (Jacobian matrix method) | Whole video |
+
 ## Credit
 
 * Algorithm for Jacobian IK: https://medium.com/unity3danimation/overview-of-jacobian-ik-a33939639ab2
