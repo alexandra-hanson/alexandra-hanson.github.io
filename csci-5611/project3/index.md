@@ -23,18 +23,58 @@ skeleton.
 ### Inverse Kinematics Scenario
 
 The first IK solver I implemented used the cyclic coordinate descent approach to
-animate the arms of a spider reaching toward a goal. The goal here was the
-current coordinates of the mouse to allow for user interaction with the scene. I
+animate the arms of a spider skeleton reaching toward a goal. The goal here was 
+the current coordinates of the mouse to allow for user interaction with the scene. I
 consider this the primary IK solver I implemented since I found it looked the
 most natural.
 
+For the spider animation, I created an "Arm" library which stores as floats the 
+lengths, angles, and joint speeds of each component making up the arm. 
+Additionally, I used Vec2s as positions for where the arm is rooted in place, 
+the starting places of each arm component, and the endpoint. I also have an 
+array of Vec2s that represent the joint limits of each arm component, where the
+"x" is a minimum and the "y" is a maximum degree (in radians) around the unit
+circle. Deciding these minimums and maximums was actually quite difficult -- I
+was constantly referencing a unit circle and thinking about the angle at which
+each component was resting in order to debug and tune my parameters.
+
+In the Arm library, I have my CCD IK solver (as well as the Jacobian solver),
+along with methods to check the joint limits, draw the arm, and do the actually
+forward kinemantic computation.
+
+In addition to the spider skeleton, I also created an animation "walk" that
+implements a moving IK system. The movement produced does not really look like
+walking because I was not able to figure out how to use joint limits to restrict
+the skeleton's movement; however, it does successfully move across the screen by 
+changing the root of the skeleton. I give it a number of a goal points along the
+floor and each time a goal is reached, the root of the skeleton changes and I
+reverse the skeleton data so that the movement appears seemless and connected.
+
+The computation here uses a CCD solver within a library called "Legs" which is
+very similar to the library for the Arm in my spider simulation. In this 
+library, I add an array of goal positions and iterate through it to move the 
+skeleton across the screen.
+
 ### Comparative analysis
 
-Placeholder text
+The alternative IK solver I chose to implement was the Jacobian matrix method.
+This thing was a doozy! But I was finally able to get it working. I initially
+tried to do so for 2-dimensions and became confused by the axis of rotation
+(there is not really one in 2d) so my workaround was to translate my endPoint
+into 3d and use a 3 vector (0, 0, 1) for my axis of rotation. This was probably
+silly of me but I was able to compute the Jacobian matrix this way.
 
-### Reflection
+The Jacobian solver uses the same angle limits, joint speeds, etc. as the 
+CCD-solver, so they should be quite similar. However, you can see in the video 
+of the spider with the Jacobian solver that it looks much less natural and is
+quite jittery. This could be because I may not have implemented it perfectly.
+In any case, comparing the two, I found that
 
-Placeholder text
+1. The movement produced by my CCD looked much more natural than that of my
+Jacobian solver.
+2. The Jacobian matrix method was way harder to implement! It took me a lot of
+time and reading to figure out exactly what was going on. I generally found it
+less intuitive.
 
 ## Code
 
