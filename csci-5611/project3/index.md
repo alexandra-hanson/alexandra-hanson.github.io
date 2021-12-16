@@ -18,7 +18,7 @@ I have completed the following features:
 
 This is a project for CSCI 5611: Animation and Planning in Games that uses 
 optimization based approaches to implement inverse kinemantics for a basic
-skeleton.
+skeleton. (I apologize that my simulation is very simple!)
 
 ### Inverse Kinematics Scenario
 
@@ -140,4 +140,8 @@ should be considered moving IK.
 
 ## Credit
 
-* Algorithm for Jacobian IK: https://medium.com/unity3danimation/overview-of-jacobian-ik-a33939639ab2
+* I largely followed this [Overview of Jacobian IK](https://medium.com/unity3danimation/overview-of-jacobian-ik-a33939639ab2)
+   * This helped me a great deal in understanding and implementing the algorithm
+     in Processing
+* I again used the Vec2 library provided in the first homework assignment and 
+modified it for 3d to use for the Jacobian IK solver
