@@ -48,6 +48,8 @@ below.
 
 ### Simulation : Spider
 
+**CCD SOLVER**
+
 This first video I consider my "baseline." I used a CCD solver with joint limits
 to create the animation below:
 
@@ -55,9 +57,14 @@ to create the animation below:
 
 | **Component**      | **Timestamps** |
 | ----------- | ----------- |
-| Multi-arm IK | Whole video |
+| Multi-arm IK (CCD approach) | Whole video |
 | Joint limits | Whole video |
 | User interaction | Whole video |
+
+In contrast, you can see the same solver without joint limits below. The legs
+bunch together and move extremely quickly -- not very natural looking at all!
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cGfC8nlMPw0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Credit
 
