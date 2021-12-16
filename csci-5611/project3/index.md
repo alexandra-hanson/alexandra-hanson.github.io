@@ -8,7 +8,7 @@
 
 I have completed the following features:
 
-* Single-arm IK (at least 2D) + Multi-arm IK (at least 2D)
+* Multi-arm IK (at least 2D)
 * Moving IK (at least 2D)
 * Joint limits
 * User Interaction
@@ -43,16 +43,21 @@ and the code for the "walking" animation should be linked at
 
 ## Media
 
-I implemented the following features, which you can see in the two videos below.
+I implemented the following features, which you can see in the different videos 
+below.
 
-### Simulation
+### Simulation : Spider
+
+This first video I consider my "baseline." I used a CCD solver with joint limits
+to create the animation below:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uQrM6lJb8wY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 | **Component**      | **Timestamps** |
 | ----------- | ----------- |
-| _ | _ |
-| _ | _ |
-| _ | _ |
-| _ | _ |
+| Multi-arm IK | Whole video |
+| Joint limits | Whole video |
+| User interaction | Whole video |
 
 ## Credit
 
