@@ -81,6 +81,19 @@ multi-arm IK, joint limits, and user interaction).
 | User interaction | Whole video |
 | Alternative IK Solver (Jacobian matrix method) | Whole video |
 
+### Simulation : "Walking"
+
+I hesitate to call this walking since I wasn't able to get this work with joint
+limits. However, my IK system does move across the screen by changing the root
+of the skeleton based on which node is currently touching the floor, so this
+should be considered moving IK.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jknES7rTzv4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+| **Component**      | **Timestamps** |
+| ----------- | ----------- |
+| Moving IK | Whole video |
+
 ## Credit
 
 * Algorithm for Jacobian IK: https://medium.com/unity3danimation/overview-of-jacobian-ik-a33939639ab2
