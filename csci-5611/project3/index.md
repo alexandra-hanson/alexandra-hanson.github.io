@@ -22,7 +22,11 @@ skeleton.
 
 ### Inverse Kinematics Scenario
 
-Placeholder text 
+The first IK solver I implemented used the cyclic coordinate descent approach to
+animate the arms of a spider reaching toward a goal. The goal here was the
+current coordinates of the mouse to allow for user interaction with the scene. I
+consider this the primary IK solver I implemented since I found it looked the
+most natural.
 
 ### Comparative analysis
 
